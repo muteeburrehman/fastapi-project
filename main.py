@@ -5,13 +5,13 @@ from functools import wraps
 import jwt
 from datetime import datetime
 
-import models
-import schemas
-from models import Base, User, TokenTable
+from models import models
+from schemas import schemas
+from models.models import Base, User, TokenTable
 
-from utils import create_access_token, create_refresh_token, verify_password, get_hashed_password
-from auth_bearer import JWTBearer
-from database import get_db, engine
+from utils.utils import create_access_token, create_refresh_token, verify_password, get_hashed_password
+from auth.auth_bearer import JWTBearer
+from database.database import get_db, engine
 
 app = FastAPI()
 
